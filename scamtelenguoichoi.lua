@@ -6,6 +6,13 @@ local player = Players.LocalPlayer
 -- Đúng ID của accphugau20
 local targetUserId = 8257239246
 
+StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[Debug] Đã bắt đầu kiểm tra server của accphugau20...";
+    Color = Color3.new(1, 1, 0);
+    Font = Enum.Font.SourceSansBold;
+    TextSize = 18;
+})
+
 spawn(function()
     local success, placeId, jobId = pcall(function()
         return TeleportService:GetPlayerPlaceInstanceAsync(targetUserId)
